@@ -1,3 +1,7 @@
+이 파일의 이름을 application.yml 으로 하여 resources 디렉토리에 저장한다.
+
+clientId, clientSecret 은 각 소셜의 가이드에 따라 취득해야 한다.
+
 server :
   port : 8000
 
