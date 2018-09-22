@@ -94,11 +94,12 @@ public class UserAspect
     {
         log.info("Save kakao => {}", map);
         HashMap<String, String> propertyMap = (HashMap<String, String>)(Object) map.get("properties");
+        HashMap<String, String> accountMap = (HashMap<String, String>)(Object) map.get("kakao_account");
         return User.builder()
                 .userPrincipal(String.valueOf(map.get("id")))
                 .userName(propertyMap.get("nickname"))
-                .userEmail(map.get("kaccount_email"))
-                .userImage(propertyMap.get("thumbnail_image"))
+                .userEmail(accountMap.get("email"))
+                .userImage("")
                 .socialType(SocialType.KAKAO)
                 .build();
     }
