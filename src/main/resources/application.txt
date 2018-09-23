@@ -2,52 +2,60 @@
 
 clientId, clientSecret 은 각 소셜의 가이드에 따라 취득해야 한다.
 
-server :
-  port : 8000
 
-debug : true
+server:
+    port: 8000
 
-facebook :
-    client :
-        clientId : 
-        clientSecret : 
-        accessTokenUri : https://graph.facebook.com/oauth/access_token
-        userAuthorizationUri : https://www.facebook.com/dialog/oauth?display=popup
-        tokenName : oauth_token
-        authenticationScheme : query
-        clientAuthenticationScheme : form
+debug: true
+
+logging:
+    level:
+        ROOT: DEBUG
+
+facebook:
+    client:
+        clientId:
+        clientSecret:
+        accessTokenUri: https://graph.facebook.com/oauth/access_token
+        userAuthorizationUri: https://www.facebook.com/dialog/oauth?display=popup
+        tokenName: oauth_token
+        authenticationScheme: query
+        clientAuthenticationScheme: form
         # scope : email, profile
-    resource :
-        userInfoUri : https://graph.facebook.com/me?fields=id,name,email,link
+    resource:
+        userInfoUri: https://graph.facebook.com/me?fields=id,name,email,link
 
-google :
-    client :
-        clientId : 
-        clientSecret : 
-        accessTokenUri : https://accounts.google.com/o/oauth2/token
-        userAuthorizationUri : https://accounts.google.com/o/oauth2/auth
-        clientAuthenticationScheme : form
-        scope : 
+google:
+    client:
+        clientId:
+        clientSecret:
+        accessTokenUri: https://accounts.google.com/o/oauth2/token
+        userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
+        clientAuthenticationScheme: form
+        scope:
         - email
         - profile
-    resource :
-        userInfoUri : https://www.googleapis.com/oauth2/v2/userinfo
+    resource:
+        userInfoUri: https://www.googleapis.com/oauth2/v2/userinfo
 
-kakao :
-    client :
-        clientId : 
-        clientSecret : 
-        accessTokenUri : https://kauth.kakao.com/oauth/token
-        userAuthorizationUri : https://kauth.kakao.com/oauth/authorize
-    resource :
-        userInfoUri : https://kapi.kakao.com/v2/user/me
+kakao:
+    client:
+        clientId:
+        clientSecret:
+        accessTokenUri: https://kauth.kakao.com/oauth/token
+        userAuthorizationUri: https://kauth.kakao.com/oauth/authorize
+        clientAuthenticationScheme: form
+    resource:
+        userInfoUri: https://kapi.kakao.com/v2/user/me
 
-naver :
-    client :
-        clientId : 
-        clientSecret : 
-        accessTokenUri : https://nid.naver.com/oauth2.0/token
-        userAuthorizationUri : https://nid.naver.com/oauth2.0/authorize
-    resource :
-        userInfoUri : https://openapi.naver.com/v1/nid/me
+naver:
+    client:
+        clientId:
+        clientSecret:
+        accessTokenUri: https://nid.naver.com/oauth2.0/token
+        userAuthorizationUri: https://nid.naver.com/oauth2.0/authorize
+        clientAuthenticationScheme: form
+    resource:
+        userInfoUri: https://openapi.naver.com/v1/nid/me
+
 
